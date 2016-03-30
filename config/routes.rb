@@ -1,5 +1,11 @@
 Rails.application.routes.draw do
  
+  get 'division/combustibles'
+
+  get 'division/lubricantes'
+
+  get 'division/metalmecanica'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
