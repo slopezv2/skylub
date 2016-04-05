@@ -23,7 +23,7 @@
 						<div class="inner">
 							<a  class="image"><img src="images/logoskyblanco.png" alt="" width="80%" /></a>
                             <p>EFICIENCIA CON SEGURIDAD </p>
-							
+
 						</div>
 					</section>
 
@@ -71,10 +71,10 @@
 								</div>
 							</div>
 						</section>
-                        
-                        
+
+
 					</section>
-                
+
 
 				<!-- Two -->
 					<section id="two" class="wrapper style3 fade-up">
@@ -147,23 +147,23 @@ ambiental. </p>
 							<p>Phasellus convallis elit id ullamcorper pulvinar. Duis aliquam turpis mauris, eu ultricies erat malesuada quis. Aliquam dapibus, lacus eget hendrerit bibendum, urna est aliquam sem, sit amet imperdiet est velit quis lorem.</p>
 							<div class="split style1">
 								<section>
-									<form method="post" action="#">
+										<%=  form_for(:correo, url:correo_path) do |f| %>
 										<div class="field half first">
-											<label for="name">Nombre</label>
-											<input type="text" name="name" id="name" />
+											<%= f.label :nombre %>
+											<%= f.text_field :nombre %>
 										</div>
 										<div class="field half">
-											<label for="email">Correo</label>
-											<input type="text" name="email" id="email" />
+											<%= f.label :correo %>
+											<%= f.email_field :correo, placeholder:"micorreo@ejemplo.com" %>
 										</div>
 										<div class="field">
-											<label for="message">Mensaje</label>
-											<textarea name="message" id="message" rows="5"></textarea>
+											<%= f.label :mensaje %>
+								<%= f.text_area :mensaje, placeholder:"Escriba aqui su mensaje", rows:"5" %>
 										</div>
 										<ul class="actions">
-											<li><a href="" class="button submit">Enviar mensaje</a></li>
+											<li><%= f.submit "Enviar Mensaje"  %></li>
 										</ul>
-									</form>
+									<% end %>
 								</section>
 								<section>
 									<ul class="contact">
@@ -186,7 +186,7 @@ ambiental. </p>
 											<h3>Correo</h3>
 											<a href="#">Gerencia@skyfuelsandminerals.com</a>
 										</li>
-										
+
 										<li>
 											<h3>Social</h3>
 											<ul class="icons">

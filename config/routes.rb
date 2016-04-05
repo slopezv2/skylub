@@ -1,11 +1,11 @@
 Rails.application.routes.draw do
- 
+
   get 'lubricantes' => 'welcome#lubricantes'
   get 'combustibles' => 'welcome#combustibles'
   get 'metalmecanica' => 'welcome#metalmecanica'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
-
+  post 'welcome/enviar_co' => 'welcome#enviar_co', as: 'correo'
   # You can have the root of your site routed with "root"
    root 'welcome#index'
 
